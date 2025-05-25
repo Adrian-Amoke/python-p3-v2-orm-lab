@@ -28,7 +28,7 @@ class TestReviewProperties:
 
     def test_year_is_int(self):
         '''validates year property is assigned int'''
-        with pytest.raises(ValueError):
+        with pytest.raises(TypeError):
             department = Department.create("Payroll", "Building A, 5th Floor")
             employee = Employee.create("Lee", "Manager", department.id)
 
